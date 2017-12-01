@@ -7,7 +7,7 @@ arch="$(uname -m)"
 python $script_path/helpers/arch.py -a $arch
 
 if [ "$rebuild" = "-r" ]; then
-    docker-compose -f $script_path/docker-compose.yml --build
+    docker-compose -f $script_path/docker-compose.yml up --build
 else
-    docker-compose -f $script_path/docker-compose.yml
+    docker-compose -f $script_path/docker-compose.yml up
 fi
