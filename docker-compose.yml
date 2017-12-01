@@ -1,0 +1,22 @@
+version: '3'
+
+
+services:
+  redis:
+    image: redis
+
+  textbelt:
+    build: 
+        context: ./textbelt
+        dockerfile: Dockerfile
+        args:
+             email: your_email@something.com
+    depends_on:
+      - redis
+
+  nginx: 
+    build: ./nginx
+    ports:
+            - 80:80
+    depends_on:
+      - textbelt
