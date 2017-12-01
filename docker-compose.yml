@@ -2,11 +2,6 @@ version: '3'
 
 
 services:
-<<<<<<< HEAD
-=======
- 
- 
->>>>>>> f5c2a7c8e35f6523f711f1fd36cd6c370bd93a7f
   redis:
     image: redis
 
